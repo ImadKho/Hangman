@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../_Images/iconeCorde.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c7b88410ae.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="../Menu/menu.html">
+                    <i class="fa-solid fa-house"></i> 
+                    Home
+                </a>
+            </li>
+            <li class="namePageActive">
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                    Profil
+                </a>
+            </li>
+            <li>
+                <a href="../History/history.html">
+                   <i class="fa-solid fa-clock-rotate-left"></i>
+                    Historique
+                </a>
+            </li>
+            <li>
+                <a>
+                    <i class="fa-sharp fa-solid fa-bell"></i>
+                    Notifications               
+                </a>
+            </li>
+        </ul>
+        
+    </nav>
+
+    <div class="flexContiner">
+        <aside class="flexItem">
+            <ul class="sidebar">
+                <li id="infoCompte_">
+                    <i class="fa-solid fa-pen"></i>
+                    Infos compte
+                </li>
+                <li id="changerMdp_">
+                    <i class="fa-solid fa-key"></i>
+                    Mot de passe
+                </li>
+                <li id="stats_">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Stats parties
+                </li>
+                <li id="suggest_">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Suggestions
+                </li>
+                <li id="sprCompte_">
+                    <i class="fa-solid fa-trash"></i>
+                    Supprimer compte
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Div des infos du profil -->
+        <article class="flexItem" id="infoCompte">
+            <h2 style="text-align: center; margin-bottom: 1em;">Infos du compte</h2>
+            <form action="" method="post" style="background-color: transparent;">
+                <label for="nickname" style="margin-left: 0.4em;">Pseudo</label>
+                <br>
+                <input type="text" id="nickname" value="Pseudo">
+    
+                <br><br>
+    
+                <label for="nom" style="margin-left: 0.4em;">Nom</label>
+                <label for="prenom" style="margin-left: 14.6em;">Prénom</label>
+                <br>
+                <input type="text" id="nom" value="Nom">
+                <input type="text" id="prenom" value="Prenom" style="margin-left: 5.5em;">
+                
+                <br><br>
+    
+                <label for="dateNaiss" style="margin-left: 0.4em;">Date de naissance</label>
+                <label for="adresseMail" style="margin-left: 8.4em;">Adresse mail</label>
+                <br>
+                <input type="date" id="dateNaiss" value="2002-10-12">
+    
+                <input type="mail" id="adresseMail" value="test@gmail.com" style="margin-left: 8.8em;">
+
+                <br><br>
+                <input type="submit" value="Enregistrer modifications">
+                <button type="reset">Annuler</button>
+            </form>
+        </article>
+
+        <!-- Div du mdp -->
+        <article class="flexItem" id="changerMdp" style="display: none;">
+            <h2 style="text-align: center; margin-bottom: 1em;">Modifier mot de passe</h2>
+            <form action="" method="post" style="background-color: transparent;">
+                <label for="nickname" style="margin-left: 0.4em;">Mot de passe actuel</label>
+                <br>
+                <input type="password" name="currentPswd">
+    
+                <br><br>
+    
+                <label for="nom" style="margin-left: 0.4em;">Nouveau mot de passe</label>
+                <br>
+                <input type="password" name="newPswd">
+                
+                <br><br>
+    
+                <label for="nom" style="margin-left: 0.4em;">Confirmer mot de passe</label>
+                <br>
+                <input type="password" name="confirmPswd">
+    
+
+                <br><br>
+                <input type="submit" value="Enregistrer modifications">
+                <button type="reset">Annuler</button>
+            </form>
+        </article>
+
+        <!-- Div de stats -->
+        <article class="flexItem" id="stats" style="display: none;">
+            <h2 style="text-align: center; margin-bottom: 1em; margin-bottom: 2em;">Statistiques des parties</h2>
+
+            <div class="miniStatContainer">
+                <h3 style="margin-left: 0.4em; font-weight: lighter; display: inline-block;">Parties jouées</h3>
+                <div style="display: inline-block;">2</div>
+            </div>
+
+            <br><br>
+
+            <div class="miniStatContainer">
+                <h3 style="margin-left: 0.4em; font-weight: lighter; display: inline-block;">Mots trouvés</h3>
+                <div style="display: inline-block;">9/12</div>
+            </div>
+
+            
+            <br><br>
+
+            <div class="miniStatContainer">
+                <h3 style="margin-left: 0.4em; font-weight: lighter; display: inline-block;">Ratio parties</h3>
+                <div style="display: inline-block;">0.75</div>
+            </div>
+            <br><br>
+            <a href="../Classement/classement.html" target="_blank"><h3 id="msgClassement">Voir le classement général</h3></a>
+        </article>
+
+        <!-- Div de suggestions -->
+        <article class="flexItem" id="suggest" style="display: none;">
+            <h2 style="text-align: center; margin-bottom: 1em; margin-bottom: 1em;">
+                Exprimez-vous !
+            </h2>
+            <form action="" method="post" style="background-color: transparent;">
+                <label for="type">Type</label>
+                <br>
+                <select name="type" id="type">
+                    <option value="" selected disabled hidden>Type</option>
+                    <option value="Jeu">Bug</option>
+                    <option value="Profil">Suggestion</option>
+                </select>
+                <br> <br>
+                <label for="rubrique">Rubrique</label>
+                <br>
+                <select name="rubrique" id="rubrique">
+                    <option value="" selected disabled hidden>Choisir une rubrique</option>
+                    <option value="Jeu">Jeu</option>
+                    <option value="Profil">Profil</option>
+                    <option value="Historique">Historique</option>
+                    <option value="Notifications">Notifications</option>
+                    <option value="Autre">Autre</option>
+                </select>
+    
+                <br><br>
+    
+                <label for="">Description</label>
+                <br>
+                <textarea name="description_suggest" id="" cols="60" rows="4"></textarea>
+
+                <br><br>
+                <input type="submit" value="Envoyer">
+                <button type="reset">Annuler</button>
+            </form>
+        </article>
+
+        <!-- Div de spr -->
+        <article class="flexItem" id="sprCompte" style="display: none;">
+            <h2 style="text-align: center;">
+                Êtes-vous sûr de supprimer votre compte ?
+            </h2>
+
+            <form action="" method="post" style="background-color: transparent;">
+                <img src="../_Images/sad-cat.svg" alt="sad cat" srcset="" id="imgCat">
+                <p>
+                    La suppression de votre compte entraînera la perte de toute progression et
+                    statistique 
+                </p>
+                <input type="submit" value="Supprimer compte">
+            </form>
+        </article>
+    </div>
+
+</body>
+<script>
+
+    const nbParties = document.querySelector(".miniStatContainer div");
+    if(nbParties.innerHTML.length < 3){
+        nbParties.style.width = "27.6833px";
+    }
+
+    const ratioParties = document.querySelector(".miniStatContainer:last-of-type div")
+    if(parseFloat(ratioParties.innerText) > 0.5){
+        ratioParties.style.color = "green";
+    }
+    else if(parseFloat(ratioParties.innerText) == 0.5){
+        ratioParties.style.color = "rgb(220, 173, 18)";
+    }
+    else{
+        ratioParties.style.color = "#c0392b";
+    }
+
+    const itemAside = document.querySelectorAll("aside li");
+    itemAside[0].classList.add("selected")
+    
+    var articles = document.querySelectorAll("article")
+
+    itemAside.forEach(item => item.addEventListener("click", (item) => {
+        for(var e of itemAside){
+            if(e.classList.contains("selected"))
+                break;
+        }
+        e.classList.remove("selected")
+        var idPreviousArticle = e.id.replace("_", "") 
+        item.target.classList.add("selected")
+        var idNewArticle = item.target.id.replace("_", "") 
+
+        for(let article of articles){
+            if(article.id == idPreviousArticle){
+                article.style.display = "none";
+            }
+
+        }
+
+        for(let article of articles){
+            if(article.id == idNewArticle){                
+                article.style.display = "";
+            }
+        }
+
+    }));
+
+
+
+</script>
+</html>

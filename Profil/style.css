@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+body{
+    background-color: #e0e0e0;
+}
+
+i{
+    background-color: transparent;
+    pointer-events: none;
+}
+
+h1{
+    color: #27262c;
+    text-align: center;
+    margin-top: 0.75em;
+}
+
+
+nav{
+    border-bottom: solid 3px black;
+    padding-bottom: 4px;
+}
+
+ul:not(.sidebar){
+	display: flex;
+	width: 100%;
+	height: 10vh;
+	margin: auto;
+	justify-content: space-between;
+	text-align: center;
+}
+
+li {
+    padding: 1.25rem 2rem 1.15rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #27262c;
+    min-width: 180px;
+}
+
+a{
+    text-decoration: none;
+    background-color: none;
+    color: #27262c;
+}
+
+li:not(aside li):hover{
+    background-image: url("../_Images/bg-itemNavBar.png");
+    background-size: 100% 100%;
+    animation: spring 300ms ease-out;
+    text-shadow: 0 -1px 0 #c0392b;
+    font-weight: bold;
+}
+
+.namePageActive{
+    background-image: url("../_Images/bg-itemNavBar.png");
+    background-size: 100% 100%;
+    text-shadow: 0 -1px 0 #c0392b;
+    font-weight: bold; 
+}
+
+li:hover a{
+    color: #27262c;
+    background-color: #c0392b;
+}
+
+li i{
+    margin-right: 0.25em;
+}
+
+li:not(aside li):active {
+    transform: translateY(4px);
+}
+
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+.selected{
+    background-color: #c0392b;
+    background-size: 100% 100%;
+    text-shadow: 0 -1px 0 #c0392b;
+    font-weight: bold;
+}
+
+.flexContiner{
+    display: flex;
+    margin-top: 3em;
+    gap: 7em;
+    
+}
+
+.flexItem{
+    border: 1px solid black;
+}
+
+
+aside{
+    margin-top: 5em;
+    margin-left: 5em;
+    padding-top: 0;
+    height: 292px;
+    box-shadow: 1px 0px 1px 0px rgba(0,0,0,0.75);
+}
+
+aside li{
+    animation: none !important;
+    background-color: rgba(255, 255, 255, 0.797);
+    border-bottom: 1px solid rgb(158, 158, 158);
+}
+
+article{
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.797);
+    box-shadow: 2px 1px 3px 0px rgba(0,0,0,0.75);
+    transform: scale(1.1);
+    margin-left: 1em;
+    padding-top: 2em;
+    height: 400px;
+    width: 513.25px;
+}
+
+#infoCompte input, button[type="reset"]{
+    padding: 1em;
+    margin: 0.5em;
+    border: solid 1px rgb(157, 157, 157);
+    outline: none;
+    border-radius: 6px;
+}
+
+
+#infoCompte input:focus{
+    outline: solid 2px #c0392b;
+    border: solid 1px transparent;
+}
+
+#infoCompte input[type="submit"], button[type="reset"]{
+    background-color: #c0392b;
+    transition: background-color 0.4s;
+    color: #27262c;
+    font-weight: bolder;
+}
+
+button[type="reset"]{
+    background-color: #b0b0b0;
+}
+
+#infoCompte input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #ad372a;
+}
+
+#infoCompte button[type="reset"]:hover{
+    cursor: pointer;
+    background-color: #989898;
+}
+
+
+#changerMdp input, button[type="reset"]{
+    padding: 1em;
+    margin: 0.5em;
+    border: solid 1px rgb(157, 157, 157);
+    outline: none;
+    border-radius: 6px;
+}
+
+#changerMdp input:not([type="submit"]){
+    width: 50%;
+}
+
+#changerMdp input:focus{
+    outline: solid 2px #c0392b;
+    border: solid 1px transparent;
+}
+
+#changerMdp input[type="submit"], button[type="reset"]{
+    background-color: #c0392b;
+    transition: background-color 0.4s;
+    color: #27262c;
+    font-weight: bolder;
+}
+
+button[type="reset"]{
+    background-color: #b0b0b0;
+}
+
+#changerMdp input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #ad372a;
+}
+
+#changerMdp button[type="reset"]:hover{
+    cursor: pointer;
+    background-color: #989898;
+}
+
+#stats .miniStatContainer{
+    margin-left: 7em;
+}
+
+#stats .miniStatContainer div{
+    text-align: center;
+    margin-left: 5em;
+    border: solid rgb(157, 157, 157) 1px;
+    background-color: rgba(255, 255, 255, 0.886);
+    padding: 1em 0.8em;
+}
+
+#stats .miniStatContainer:first-of-type div{
+    margin-left: 4.3em;
+}
+
+#stats .miniStatContainer:last-of-type div{
+    font-weight: bold;
+}
+
+#stats #msgClassement{
+    text-align: center;
+    color: #c0392b;
+    text-decoration: underline;
+}
+
+#suggest select{
+    margin-top: 0.5em;
+    padding: 0.5em;
+}
+
+#suggest input[type="submit"], button[type="reset"]{
+    background-color: #c0392b;
+    transition: background-color 0.4s;
+    color: #27262c;
+    font-weight: bolder;
+    padding: 1em;
+    margin: 0.5em;
+    border: solid 1px rgb(157, 157, 157);
+    border-radius: 6px;
+    margin-top: 0.05em;
+}
+
+button[type="reset"]{
+    background-color: #b0b0b0;
+}
+
+#suggest input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #ad372a;
+}
+
+#suggest button[type="reset"]:hover{
+    cursor: pointer;
+    background-color: #989898;
+}
+
+#suggest textarea{
+    resize: none;
+    margin-top: 0.2em;
+}
+
+#suggest textarea:focus{
+    border-color: #c0392b;
+    outline: none;
+}
+
+#sprCompte #imgCat{
+    width: 400px;
+    height: 400px;
+    margin-top: -80px;
+    margin-left: 45px;
+}
+
+#sprCompte p{
+    margin-top: -80px;
+    text-align: center;
+    font-size: large;
+}
+
+#sprCompte input[type="submit"]{
+    background-color: #c0392b;
+    transition: background-color 0.4s;
+    color: #27262c;
+    font-weight: bolder;
+    padding: 1em;
+    margin: 0.5em;
+    border: solid 1px rgb(157, 157, 157);
+    border-radius: 6px;
+    display: block;
+    margin: 2em auto 0;
+}
+
+#sprCompte input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #ad372a;
+
+}
+

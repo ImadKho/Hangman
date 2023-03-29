@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #e0e0e0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7em;
+    transform: scale(1.1);
+}
+
+.flexContainer{
+    display: flex;
+    background-color: #ffffffe4;
+    box-shadow: 2px 0px 8px 0px rgba(0,0,0,0.75);
+}
+
+.flexItem{
+    border: solid black 1px;
+    height: 402px;
+
+}
+
+.flexItem:nth-of-type(1){
+    width: 242px;
+    height: 402px;
+}
+
+.flexItem:nth-of-type(2){
+    width: 30em;
+    
+}
+
+.flexItem:nth-of-type(2) h1{
+    text-align: center;
+    margin-top: 2em;
+    color: #373737;
+}
+
+.box input[type = "text"], .box input[type = "password"]
+{
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #4c4c4c;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #373737;
+    border-radius: 30px;
+    transition: 0.25s;
+}
+
+.box input[type = "text"]:focus, .box input[type = "password"]:focus
+{
+    width : 280px;
+    border-color : #c0392b;
+}
+
+.box input[type = "submit"]
+{
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #c0392b;
+    padding: 14px 40px;
+    outline: none;
+    color: #959595;
+    border-radius: 30px;
+    transition: 0.25s;
+    cursor : pointer;
+}
+
+.box input[type = "submit"]:hover
+{
+    background : #c0392b;
+    color: white;
+}
+
+.flexItem:nth-of-type(2) h5{
+    text-align: center;
+    font-weight: lighter;
+    color: #6c6c6c;
+}
+
+.flexItem:nth-of-type(2) a{
+    color: #c0392b;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.modelContainer{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: visibility 0.4s;
+}
+
+.modelContainer.active{
+    visibility: visible;
+}
+
+.overlay{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333333d3;
+    transition: opacity 0.4s 0.2s ease-out;
+}
+
+.modelContainer.active .overlay{
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+
+}
+
+.myModal h1{
+    text-align: center;
+    margin-top: 0.5em;
+    padding-top: 1em;
+    color: #373737;
+}
+
+.myModal{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 50px));
+    width: 30%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 2px 0px 8px 0px rgba(0,0,0,0.75);
+    opacity: 0;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.modelContainer.active .myModal{
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
+}
+
+.myModal #closeBtn{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    cursor: pointer;
+    padding: 1em 1.5em;
+    border: none;
+    color: white;
+    background-color: #fc1745;
+}
+
+.myModal input[type="text"], .myModal input[type="password"]{
+    border-radius: 0;
+}
+
+
+

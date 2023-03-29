@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../_Images/iconeCorde.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Connexion</title>
+</head>
+<body>
+    <main>
+        <div class="flexContainer">
+            <div class="flexItem">
+                <img id="imgBvn" src="../_Images/avatar-Imad.png" alt="" srcset="">
+            </div>
+            <div class="flexItem">
+                <h1>SE CONNECTER</h1>
+                <form class = "box" action="" method="post">
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" value="Login">
+                </form>
+                <h5>Vous n'avez pas de compte ? <a class="modal-trigger">Inscrivez-vous</a> </h5>
+            </div>
+        </div>
+    </main>
+
+    <div class="modelContainer">
+        <div class="overlay modal-trigger"></div>
+    
+        <div class="myModal">
+            <h1>S'INSCRIRE</h1>
+            <button class="modal-trigger" id="closeBtn">X</button>
+            <form class = "box" action="" method="post">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm password">
+                <input type="submit" value="Sign in">
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    const modelContainer = document.querySelector(".modelContainer")
+    const triggers = document.querySelectorAll(".modal-trigger");
+    triggers.forEach((trigger)=>{
+        trigger.addEventListener("click", toggleModal)
+    })
+
+    function toggleModal(){
+        modelContainer.classList.toggle("active")
+    }
+</script>
+</html>

@@ -1,0 +1,79 @@
+.image
+{
+    transform: scale(0.2);
+    cursor: pointer;
+}
+
+.image:not(:first-of-type)
+{
+    margin-left: -10.5em;
+}
+
+.image :hover
+{
+    animation : heartBeat 1.5s infinite;
+}
+
+.empty{
+    cursor: default;
+}
+
+.empty :hover{
+    animation: none;
+}
+
+.bps{
+    animation : lastHeartBeat 1.5s infinite;
+}
+
+.bps :hover{
+    animation: none;
+}
+
+@keyframes heartBeat 
+{
+    from
+    {
+        transform: scale(1);
+    }
+    14%
+    {
+        transform: scale(1.2);
+    }
+    28%
+    {
+        transform: scale(1);
+    }
+    42%
+    {
+        transform: scale(1.2);
+    }
+    70%
+    {
+        transform: scale(1);
+    }
+}
+
+@keyframes lastHeartBeat 
+{
+    from
+    {
+        transform: scale(0.2);
+    }
+    14%
+    {
+        transform: scale(0.25);
+    }
+    28%
+    {
+        transform: scale(0.2);
+    }
+    42%
+    {
+        transform: scale(0.25);
+    }
+    70%
+    {
+        transform: scale(0.2);
+    }
+}
